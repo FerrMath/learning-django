@@ -15,13 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.http import HttpResponse
-from django.urls import path
+from django.urls import include, path
 
-def sobre_view(request):
-    return HttpResponse('Sobre o projeto')
+# Import the views from the recipes app
+from recipes.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sobre/', sobre_view)
+    path('', include('recipes.urls')), # root URL "/..."
+    path('recipes/', include('recipes.urls')), # URL "/recipes/..." nested in root URL 
 ]
