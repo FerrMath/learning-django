@@ -17,9 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-# Import the views from the recipes app
-from recipes.views import *
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('recipes.urls')), # root URL "/..."
