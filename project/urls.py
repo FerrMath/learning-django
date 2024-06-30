@@ -20,5 +20,4 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('recipes.urls')), # root URL "/..."
-    path('recipes/', include('recipes.urls')), # URL "/recipes/..." nested in root URL 
 ]

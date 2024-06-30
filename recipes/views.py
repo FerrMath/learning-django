@@ -7,10 +7,4 @@ def home_view(request):
         "title": "Recipes",
         "content": 'Welcome to the home page of the Recipes'
     }
-    return render(request, 'recipes/home.html', context=content) # Add the namespace to prevent conflicts with other templates
-
-def contact_view(request):
-    return HttpResponse('Página de contato')
-
-def about_view(request):
-    return HttpResponse('Página sobre')
+    return render(request, 'recipes/pages/home.html', context=content) # Add the namespace to prevent conflicts with other templates

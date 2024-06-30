@@ -1,0 +1,39 @@
+{% load static %}
+{% include "recipes/partials/head.html" %}
+
+<body>
+    <header id="main-header">
+        <div id="header-logo-container">
+            <a href="{% url 'home' %}">
+                <h1 id="logo">
+                    <i class="fa-solid fa-utensils"></i>
+                    Recipes
+                </h1>
+            </a>
+        </div>
+    </header>
+
+    <main class="container w80">
+        <section class="search-bar-container flex">
+            <form action="" id="search-bar" class="flex">
+                <input type="search" placeholder="Enter the search term" class="clean" name="q">
+                <button title="Search" type="submit" class="clean" id="search-btn">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
+        </section>
+        <section class="recipes-container container w80">
+            
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div id="footer-container">
+            <p>&copy; 2024 Matheus A.</p>
+            <p>Powered by Django</p>
+        </div>
+    </footer>
+    <script src="{% static "recipes/js/app.js" %}"></script>
+</body>
+
+</html>
