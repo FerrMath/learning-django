@@ -120,6 +120,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Here I am adding a new directory to the STATICFILES_DIRS list
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'testando'
+# ]
+
+# Setting the STATIC_ROOT for deployment
+STATIC_ROOT = BASE_DIR / 'static'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

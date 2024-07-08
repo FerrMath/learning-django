@@ -1,0 +1,9 @@
+{% extends "global/base.html" %}
+{% block title %}Recipe {{id}} | {% endblock title %}
+
+{% block content %}
+    <main class="container w80 recipe-details">
+        {% include "recipes/partials/recipe-card.html" with details=false %}
+    </main>
+{% endblock content %}
+

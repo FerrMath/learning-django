@@ -1,0 +1,159 @@
+<section class="recipes-container container w80">
+    <!-- Recipe cards -->
+    <!-- TODO need to make for loop for django -->
+     <div class="recipe-cards">
+        {% include "recipes/partials/recipe-card.html" %}
+        <div class="recipe-card flex flex-column">
+            <div class="recipe-card-image-container">
+                <!-- Image -->
+                 {% comment %} Placeholder image {% endcomment %}
+                 <img src="https://placehold.co/600x400" alt="placeholder">
+            </div>
+            <div class="recip-card-data-wrapper grid">
+                <div class="recipe-card-info grid">
+                    <h3 class="recipe-title">Lorem ipsum dolor sit amet.</h3>
+                    <div class="recipe-card-meta-data flex">
+                        <p class="recipe-card-user">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="recipe-card-user-name">
+                                <a href="">John Doe</a>
+                            </span>
+                        </p>
+                        <p class="recipe-card-publish-date">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="recipe-card-publish-date">30/06/2024</span>
+                        </p>
+                        <p class="recipe-card-category">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span class="recipe-card-category">
+                                <a href="">Dessert</a>
+                            </span>
+                        </p>
+                    </div>
+                    <p class="recipe-card-description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus perspiciatis accusantium quos, iusto aperiam optio!
+                    </p>
+                </div>
+                <div class="recipe-card-preparation-info flex">
+                    <p class="recipe-card-preparation-time flex flex-column">
+                        <span><i class="fa-solid fa-clock"></i> preparation</span>
+                        <span class="recipe-card-preparation-time">
+                            <span class="prep-time-format">Min.</span>
+                            <span class="prep-time">20</span>
+                        </span>
+                    </p>
+                    <p class="recipe-card-portions flex flex-column">
+                        <span><i class="fa-solid fa-pizza-slice"></i> Servings</span>
+                        <span class="recipe-card-portions-amount">5 Servings</span>
+                    </p>
+                </div>
+            </div>
+            <a href="/" class="recipe-card-more-info">
+                <i class="fa-solid fa-eye"></i>
+                <span>More info</span>
+            </a>
+        </div>
+        <div class="recipe-card flex flex-column">
+            <div class="recipe-card-image-container">
+                <!-- Image -->
+                 {% comment %} Placeholder image {% endcomment %}
+                 <img src="https://placehold.co/600x400" alt="placeholder">
+            </div>
+            <div class="recip-card-data-wrapper grid">
+                <div class="recipe-card-info grid">
+                    <h3 class="recipe-title">Lorem ipsum dolor sit amet.</h3>
+                    <div class="recipe-card-meta-data flex">
+                        <p class="recipe-card-user">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="recipe-card-user-name">
+                                <a href="">John Doe</a>
+                            </span>
+                        </p>
+                        <p class="recipe-card-publish-date">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="recipe-card-publish-date">30/06/2024</span>
+                        </p>
+                        <p class="recipe-card-category">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span class="recipe-card-category">
+                                <a href="">Dessert</a>
+                            </span>
+                        </p>
+                    </div>
+                    <p class="recipe-card-description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus perspiciatis accusantium quos, iusto aperiam optio!
+                    </p>
+                </div>
+                <div class="recipe-card-preparation-info flex">
+                    <p class="recipe-card-preparation-time flex flex-column">
+                        <span><i class="fa-solid fa-clock"></i> preparation</span>
+                        <span class="recipe-card-preparation-time">
+                            <span class="prep-time-format">Min.</span>
+                            <span class="prep-time">20</span>
+                        </span>
+                    </p>
+                    <p class="recipe-card-portions flex flex-column">
+                        <span><i class="fa-solid fa-pizza-slice"></i> Servings</span>
+                        <span class="recipe-card-portions-amount">5 Servings</span>
+                    </p>
+                </div>
+            </div>
+            <a href="/" class="recipe-card-more-info">
+                <i class="fa-solid fa-eye"></i>
+                <span>More info</span>
+            </a>
+        </div>
+        <div class="recipe-card flex flex-column">
+            <div class="recipe-card-image-container">
+                <!-- Image -->
+                 {% comment %} Placeholder image {% endcomment %}
+                 <img src="https://placehold.co/600x400" alt="placeholder">
+            </div>
+            <div class="recip-card-data-wrapper grid">
+                <div class="recipe-card-info grid">
+                    <h3 class="recipe-title">Lorem ipsum dolor sit amet.</h3>
+                    <div class="recipe-card-meta-data flex">
+                        <p class="recipe-card-user">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="recipe-card-user-name">
+                                <a href="">John Doe</a>
+                            </span>
+                        </p>
+                        <p class="recipe-card-publish-date">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="recipe-card-publish-date">30/06/2024</span>
+                        </p>
+                        <p class="recipe-card-category">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span class="recipe-card-category">
+                                <a href="">Dessert</a>
+                            </span>
+                        </p>
+                    </div>
+                    <p class="recipe-card-description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus perspiciatis accusantium quos, iusto aperiam optio!
+                    </p>
+                </div>
+                <div class="recipe-card-preparation-info flex">
+                    <p class="recipe-card-preparation-time flex flex-column">
+                        <span><i class="fa-solid fa-clock"></i> preparation</span>
+                        <span class="recipe-card-preparation-time">
+                            <span class="prep-time-format">Min.</span>
+                            <span class="prep-time">20</span>
+                        </span>
+                    </p>
+                    <p class="recipe-card-portions flex flex-column">
+                        <span><i class="fa-solid fa-pizza-slice"></i> Servings</span>
+                        <span class="recipe-card-portions-amount">5 Servings</span>
+                    </p>
+                </div>
+            </div>
+            <a href="/" class="recipe-card-more-info">
+                <i class="fa-solid fa-eye"></i>
+                <span>More info</span>
+            </a>
+        </div>
+        
+     </div>
+
+</section>

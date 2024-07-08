@@ -1,0 +1,60 @@
+<div class="recipe-card flex flex-column">
+    <div class="recipe-card-image-container">
+        <!-- Image -->
+         {% comment %} Placeholder image {% endcomment %}
+         <img src="https://placehold.co/600x400" alt="placeholder">
+    </div>
+    <div class="recip-card-data-wrapper grid">
+        <div class="recipe-card-info grid">
+            <h3 class="recipe-title">Lorem ipsum dolor sit amet.</h3>
+            <div class="recipe-card-meta-data flex">
+                <p class="recipe-card-user">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="recipe-card-user-name">
+                        <a href="">John Doe</a>
+                    </span>
+                </p>
+                <p class="recipe-card-publish-date">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span class="recipe-card-publish-date">30/06/2024</span>
+                </p>
+                <p class="recipe-card-category">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span class="recipe-card-category">
+                        <a href="">Dessert</a>
+                    </span>
+                </p>
+            </div>
+            <p class="recipe-card-description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus perspiciatis accusantium quos, iusto aperiam optio!
+            </p>
+        </div>
+        <div class="recipe-card-preparation-info flex">
+            <p class="recipe-card-preparation-time flex flex-column">
+                <span><i class="fa-solid fa-clock"></i> preparation</span>
+                <span class="recipe-card-preparation-time">
+                    <span class="prep-time-format">Min.</span>
+                    <span class="prep-time">20</span>
+                </span>
+            </p>
+            <p class="recipe-card-portions flex flex-column">
+                <span><i class="fa-solid fa-pizza-slice"></i> Servings</span>
+                <span class="recipe-card-portions-amount">5 Servings</span>
+            </p>
+        </div>
+    </div>
+    {% if is_detail_page is not True %}
+        <a href="{% url 'recipe' 1 %}" class="recipe-card-more-info">
+            <i class="fa-solid fa-eye"></i>
+            <span>More info</span>
+        </a>
+    {% endif %}
+    {% if is_detail_page is True %}
+        <div class="preparation-steps">
+            <h3>Preparation steps</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium praesentium itaque accusamus harum quaerat doloremque, ipsum laborum, laudantium nobis blanditiis adipisci, consequuntur impedit totam voluptas molestiae dolor! Reprehenderit aut mollitia ut possimus officiis debitis esse, ad rerum maxime aliquam? Id deleniti ea totam perferendis voluptas sequi dicta deserunt doloribus illo eligendi, autem numquam quaerat architecto iusto expedita rem laudantium! Hic ut quos aliquid? Cumque beatae rem quia officia aperiam, voluptas culpa aut natus exercitationem numquam vel id deserunt quae.<br> Cumque, provident fugiat! Sed tempore ab repudiandae laborum dolorem exercitationem voluptatem quaerat hic! Et, esse ut dolorum, quam sit minima sunt natus veniam dolorem libero voluptates harum beatae architecto eligendi repellendus itaque magnam officiis soluta voluptate accusamus possimus temporibus blanditiis, quo eveniet! Minima quam ducimus ea! Fuga exercitationem provident dignissimos maxime sunt inventore, ad nobis amet reprehenderit aliquid error sint placeat impedit eveniet voluptate?<br> Aspernatur officia ad eaque quasi quae, voluptatem ullam adipisci suscipit eos sit, numquam doloremque rem modi dicta nulla inventore facilis aliquam vero in facere sapiente ratione, quis illum nihil? Perferendis nam rerum voluptates accusamus. Architecto cumque harum nihil, maiores minima unde quisquam facere, nobis consequatur quam odit excepturi quidem doloribus repudiandae obcaecati voluptatum enim soluta eaque omnis delectus molestias, fugit explicabo. Iusto repudiandae, suscipit eligendi, neque placeat magnam accusantium sequi nihil commodi necessitatibus facere sit sapiente, corrupti corporis iure quibusdam reprehenderit excepturi.<br> Ea praesentium eius quae consectetur quasi ipsum pariatur error totam assumenda eaque exercitationem aliquam, cumque voluptatem quas. Doloremque, officia numquam! Pariatur voluptatum animi quasi ducimus voluptates in nam corporis neque impedit, commodi laborum officia, explicabo delectus illo ad temporibus dignissimos nulla. Atque ea minus vitae perspiciatis iusto asperiores quisquam natus perferendis facere! Nobis, placeat rerum. Deleniti, impedit quibusdam laudantium quas quod fugit aspernatur voluptas blanditiis natus accusamus explicabo modi inventore voluptatibus vel perspiciatis vitae tenetur?
+            </p>
+        </div>
+    {% endif %}
+</div>
