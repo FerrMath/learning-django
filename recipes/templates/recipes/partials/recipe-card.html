@@ -2,7 +2,9 @@
     <div class="recipe-card-image-container">
         <!-- Image -->
          {% comment %} Placeholder image {% endcomment %}
-         <img src="{{recipe.cover.url}}" alt="cover for {{recipe.title}}">
+         <a href="{% url "recipes:recipe" recipe.id %}">
+            <img src="{{recipe.cover.url}}" alt="cover for {{recipe.title}}">
+         </a>
     </div>
     <div class="recip-card-data-wrapper grid">
         <div class="recipe-card-info grid">
@@ -11,7 +13,7 @@
                 <p class="recipe-card-user">
                     <i class="fa-solid fa-user"></i>
                     <span class="recipe-card-user-name">
-                        <a href="">{{recipe.user.username}}</a>
+                        <a href="">{{recipe.user.username|title}}</a>
                     </span>
                 </p>
                 <p class="recipe-card-publish-date">
@@ -44,7 +46,7 @@
         </div>
     </div>
     {% if is_detail_page is not True %}
-        <a href="{% url 'recipe' recipe.id %}" class="recipe-card-more-info">
+        <a href="{% url 'recipes:recipe' recipe.id %}" class="recipe-card-more-info">
             <i class="fa-solid fa-eye"></i>
             <span>More info</span>
         </a>

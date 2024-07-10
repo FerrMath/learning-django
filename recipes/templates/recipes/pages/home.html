@@ -3,7 +3,12 @@
 {% block title %}Home page | {% endblock title %}
 
 {% block content %}
+
     <main class="container w80">
-        {% include "recipes/partials/recipe-list.html" %}
+        {% if recipes %}
+            {% include "recipes/partials/recipe-list.html" %}
+        {% else %}
+            <h2>No Recipes Found</h2>
+        {% endif %}
     </main>
 {% endblock content %}

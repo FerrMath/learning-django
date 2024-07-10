@@ -1,9 +1,13 @@
 {% extends "global/base.html" %}
-{% block title %}Recipe {{id}} | {% endblock title %}
+{% block title %}{{recipe.title}} | {% endblock title %}
 
 {% block content %}
     <main class="container w80 recipe-details">
-        {% include "recipes/partials/recipe-card.html" with details=false %}
+        {% if recipe %}
+            {% include "recipes/partials/recipe-card.html" with details=false %}
+        {% else %}
+            <h2>No Recipe Found</h2>
+        {% endif %}
     </main>
 {% endblock content %}
 
