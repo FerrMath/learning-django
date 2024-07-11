@@ -6,5 +6,6 @@ app_name = 'recipes'
 
 urlpatterns = [
     path('', home_view, name='home'),
-    path('recipes/<int:id>/', recipe_view, name='recipe')
+    path('recipes/<int:id>/', recipe_view, name='recipe'),
+    path('recipes/categories/<int:category_id>/', category_view, name='category'),
 ]

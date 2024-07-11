@@ -1,9 +1,15 @@
+{% load static %}
+
 <div class="recipe-card flex flex-column">
     <div class="recipe-card-image-container">
         <!-- Image -->
          {% comment %} Placeholder image {% endcomment %}
          <a href="{% url "recipes:recipe" recipe.id %}">
+            {% if recipe.cover %}
             <img src="{{recipe.cover.url}}" alt="cover for {{recipe.title}}">
+            {% else %}
+                <img src="{% static "recipes/img/default.webp" %}" alt="cover for {{recipe.title}}">
+            {% endif %}
          </a>
     </div>
     <div class="recip-card-data-wrapper grid">
@@ -23,7 +29,7 @@
                 <p class="recipe-card-category">
                     <i class="fa-solid fa-layer-group"></i>
                     <span class="recipe-card-category">
-                        <a href="">{{recipe.category.name}}</a>
+                        <a href="{% url "recipes:category" recipe.category.id %}">{{recipe.category.name}}</a>
                     </span>
                 </p>
             </div>
