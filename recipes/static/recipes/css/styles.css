@@ -154,6 +154,10 @@ section {
     transform: none;
 }
 
+.recipe-details > div > div.recip-card-data-wrapper.grid > div.recipe-card-preparation-info {
+    justify-content: space-around;
+}
+
 .recipe-card {
     background-color: var(--neutral-white);
     border-radius: 5px;
@@ -175,6 +179,7 @@ section {
     gap: 1rem;
     flex: 1 0 auto;
     width: 100%;
+    height: auto;
 }
 
 .recipe-card:hover {
@@ -182,6 +187,7 @@ section {
 }
 .recipe-card-info {
     gap: 1rem;
+    max-height: 30%;
 }
 
 .recipe-card-meta-data {
@@ -206,6 +212,7 @@ section {
 
 .recipe-card-more-info {
     width: 100%;
+    height: 60px;
     background-color: var(--primary-color-light);
     color: var(--neutral-white);
     padding: 1rem;
@@ -225,14 +232,14 @@ section {
 
 @media screen and (max-width: 1000px) {
     .recipe-cards {
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
     }
     
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     .recipe-cards {
-        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        grid-template-columns: repeat(1, minmax(260px, 1fr));
         grid-auto-rows: auto;
     }
 
