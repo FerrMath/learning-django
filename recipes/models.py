@@ -17,14 +17,14 @@ class Recipe(models.Model):
     preparation_unit = models.CharField(max_length=50)
     servings_count = models.IntegerField()
     servings_unit = models.CharField(max_length=50)
-    preparations_steps = models.TextField()
+    preparation_steps = models.TextField()
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
     is_published = models.BooleanField(default=False)
-    preparations_steps_is_html = models.BooleanField(default=False)
+    preparation_steps_is_html = models.BooleanField(default=False)
     cover = models.ImageField(upload_to='recipes/covers/%Y/%m/%d/', blank=True, null=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, default=None)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
     
     def __str__(self):
         return self.title

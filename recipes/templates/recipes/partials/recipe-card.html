@@ -26,12 +26,14 @@
                     <i class="fa-solid fa-calendar"></i>
                     <span class="recipe-card-publish-date">{{recipe.updated_at}}</span>
                 </p>
-                <p class="recipe-card-category">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <span class="recipe-card-category">
-                        <a href="{% url "recipes:category" recipe.category.id %}">{{recipe.category.name}}</a>
-                    </span>
-                </p>
+                {% if recipe.category is not None %}
+                    <p class="recipe-card-category">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span class="recipe-card-category">
+                            <a href="{% url "recipes:category" recipe.category.id %}">{{recipe.category.name}}</a>
+                        </span>
+                    </p>
+                {% endif %}
             </div>
             <p class="recipe-card-description">
                 {{recipe.description|truncatewords:25}}
@@ -61,7 +63,11 @@
         <div class="preparation-steps">
             <h3>Preparation steps</h3>
             <p>
-                {{recipe.preparations_steps|linebreaksbr}}
+                {% if recipe.preparation_steps_is_html is True%}
+                    {{recipe.preparation_steps|safe}}
+                {% else %}
+                    {{recipe.preparation_steps|linebreaksbr}}
+                {% endif %}
             </p>
         </div>
     {% endif %}

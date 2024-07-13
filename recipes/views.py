@@ -25,16 +25,13 @@ def recipe_view(request, id):
     return render (request, 'recipes/pages/recipe.html', context=context)
 
 def category_view(request, category_id):
-    try:
-        category = get_object_or_404(Category, id=category_id)
-    except Http404:
-        return render(request, 'global/pages/404.html', status=404, context={'message':'Category not found'})
-    
+    category = Category.objects.filter(id=category_id).first()
     recipes = Recipe.objects.filter(category=category, is_published=True)
 
     context = {
         "title": "Recipes",
         "content": 'Welcome to the home page of the Recipes',
         'recipes': recipes,
+        'category': category,
     }
-    return render(request, 'recipes/pages/home.html', context=context)
+    return render(request, 'recipes/pages/category.html', context=context)
