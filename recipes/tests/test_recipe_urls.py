@@ -18,5 +18,3 @@ class RecipeUrlsTest(TestCase):
         recipe_reverse_url = reverse('recipes:recipe', kwargs={'id': 1})
         print(f'Recipe URL: {recipe_reverse_url}')
         self.assertEqual(recipe_reverse_url, '/recipes/1/', msg='Recipe URL is incorrect')
-    
-    
