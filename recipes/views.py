@@ -13,8 +13,11 @@ def home_view(request):
     return render(request, 'recipes/pages/home.html', context=content) # Add the namespace to prevent conflicts with other templates
     
 def recipe_view(request, id):
-    recipe = get_object_or_404(Recipe, id=id)
-    if not recipe.is_published:
+    try:
+        recipe = get_object_or_404(Recipe, id=id)
+        if not recipe.is_published:
+            raise Http404
+    except Http404 as e:
         return render(request, 'global/pages/404.html', status=404, context={'message':'Recipe not found or is not published.'})
     
     context = {
