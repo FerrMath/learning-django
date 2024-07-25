@@ -1,11 +1,8 @@
 <section class="recipes-container">
     <!-- Recipe cards -->
-    <!-- TODO need to make for loop for django -->
      <div class="recipe-cards">
         {% for recipe in recipes %}
             {% include "recipes/partials/recipe-card.html" %}
-        {% empty %}
-            <p>No recipes found</p>
         {% endfor %}
      </div>
 

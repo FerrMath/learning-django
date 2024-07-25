@@ -1,8 +1,9 @@
 from django.test import TestCase
 from django.urls import reverse
+from .test_recipe_base import RecipeTestBase
 
 # Create your tests here.
-class RecipeUrlsTest(TestCase):
+class RecipeUrlsTest(RecipeTestBase):
     def test_recipe_home_url_is_correct(self):
         home_reverse_url = reverse('recipes:home')
         print(f'Home URL: {home_reverse_url}')

@@ -4,7 +4,7 @@ from .models import Category, Recipe
 
 # Create your views here.
 def home_view(request):
-    recipes = Recipe.objects.filter(is_published=True)
+    recipes = Recipe.objects.filter(is_published=True).order_by('-id')
     content = {
         "title": "Recipes",
         "content": 'Welcome to the home page of the Recipes',
@@ -28,7 +28,11 @@ def recipe_view(request, id):
     return render (request, 'recipes/pages/recipe.html', context=context)
 
 def category_view(request, category_id):
-    category = Category.objects.filter(id=category_id).first()
+    try:
+        category = get_object_or_404(Category, id=category_id)
+    except Http404 as e:
+        return render(request, 'global/pages/404.html', status=404, context={'message':'Category not found.'})
+    
     recipes = Recipe.objects.filter(category=category, is_published=True)
 
     context = {
